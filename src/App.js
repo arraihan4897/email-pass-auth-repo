@@ -10,13 +10,16 @@ const handleRegister= (event)=> {
 event.preventDefault();
 console.log(event.target.email.value);
 }
+const changeHandle=(event)=>{
+console.log(event.target.value);
+}
 function App() {
   // const app = initializeApp(firebaseConfig);
  
   return (
     <div className="App">
       <form onSubmit={handleRegister}>
-        <input type="Email" name="Email" placeholder='write Email  Here' />
+        <input onChange={changeHandle} type="Email" name="Email" placeholder='write Email  Here' />
         <br />
         <input type="Password"   name="password" placeholder='write Password Here'  />
         <br />
